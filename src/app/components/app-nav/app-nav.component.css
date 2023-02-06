@@ -1,0 +1,18 @@
+.nav-shadow {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.182);
+}
+
+.active {
+  color: white !important;
+  font-weight: 500;
+  text-decoration: solid underline white 4px;
+
+}
+
+.nav-link {
+  color: white;
+}
+
+.logo {
+  letter-spacing: -1px;
+}
