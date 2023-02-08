@@ -1,0 +1,26 @@
+<div class="container pt-5">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Website</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.website }}</td>
+        <td>
+          <a class="btn btn-success" routerLink="{{ user.id }}">Details</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,8 @@
+<div class="container pt-5">
+  <app-user [user]="user"></app-user>
+  <div class="row row-cols-auto justify-content-center m-0">
+    <div *ngFor="let post of userPosts" class="card-container">
+      <post-card [post]="post"></post-card>
+    </div>
+  </div>
+</div>
