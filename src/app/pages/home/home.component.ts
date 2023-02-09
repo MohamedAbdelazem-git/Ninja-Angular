@@ -15,5 +15,10 @@ export class HomeComponent implements OnInit {
       error: (error) => console.log(error),
     });
   }
+
+  getSearchData(event: string) {
+    console.log(event);
+    this.posts = this.posts.filter((val) => val.title.indexOf(event) != -1);
+  }
   // posts: Array<Post> = posts;
 }

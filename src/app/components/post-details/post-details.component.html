@@ -1,10 +1,4 @@
-<div class="container">
-  <div class="row">
-    <div *ngIf="post">
-      <post-card [post]="post"></post-card>
-    </div>
-  </div>
-  <div class="row">
-    <div *ngIf="!post">not found</div>
-  </div>
+<app-nav></app-nav>
+<div class="container p-5">
+  <app-post-list></app-post-list>
 </div>

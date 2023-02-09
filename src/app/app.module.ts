@@ -12,6 +12,9 @@ import { UserComponent } from './components/user/user.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { UserPostCardComponent } from './components/user-post-card/user-post-card.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { SeacrhInputComponent } from './components/seacrh-input/seacrh-input.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     UserListComponent,
     PostDetailsComponent,
     UserDetailsComponent,
+    UserPostCardComponent,
+    CommentsComponent,
+    SeacrhInputComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

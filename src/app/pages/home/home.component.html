@@ -1,14 +1,9 @@
-<div
-  *ngIf="posts.length > 0"
-  class="row row-cols-auto justify-content-center m-0"
->
-  <div *ngFor="let post of posts" class="card-container">
-    <post-card [post]="post"></post-card>
+<app-nav (searchData)="getSearchData($event)"></app-nav>
+<div class="container">
+  <h3 class="my-5">All Posts</h3>
+  <div class="row row-cols-auto justify-content-center m-0">
+    <div *ngFor="let post of posts" class="card-container">
+      <post-card [post]="post"></post-card>
+    </div>
   </div>
 </div>
-<!-- <div *ngIf="posts.length == 0">
-  <img
-    src="https://assets2.lottiefiles.com/private_files/lf30_fup2uejx.json"
-    alt=""
-  />
-</div> -->

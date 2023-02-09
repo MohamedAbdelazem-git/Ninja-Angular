@@ -1,1 +1,72 @@
-<p>post-list works!</p>
+<div class="card-details">
+  <a routerLink="/{{ post.id }}">
+    <div>
+      <img
+        class="post-img"
+        src="../../../assets/imgs/angular.png"
+        alt=""
+        srcset=""
+      />
+    </div>
+    <div>
+      <h4>"{{ post.title | titlecase }}"</h4>
+    </div>
+    <div class="d-flex w-100 h-100">
+      <div class="col d-flex flex-column justify-content-start px-3">
+        <div class="d-flex align-items-center">
+          <div class="fw-medium m-0 me-2 creator">
+            {{ post.body }}
+          </div>
+          <div class="status bg-secondary"></div>
+          <!-- <div
+          [class]="
+             post.creator.isOnline ? 'status bg-danger' : ' status bg-secondary'
+          "
+        ></div> -->
+        </div>
+        <div class="col mt-2">
+          <button type="button" class="radius-0 btn btn-outline-danger">
+            Unfollow
+          </button>
+          <!-- <button
+          type="button"
+          [class]="
+               post.creator.isFollowing
+              ? ' radius-0 btn btn-outline-danger'
+              : 'radius-0 btn btn-danger'
+          "
+        >
+          {{ post.creator.isFollowing ? "Unfollow" : "Follow" }}
+        </button> -->
+        </div>
+      </div>
+      <div class="col d-flex justify-content-evenly">
+        <div>
+          <p class="fw-medium m-0">Follwers:</p>
+          <p class="fw-medium m-0">Likes:</p>
+        </div>
+        <div>
+          <p class="fw-medium m-0">999</p>
+          <p class="fw-medium m-0">999</p>
+          <!-- <p class="fw-medium m-0">{{post.creator.followers }}</p>
+        <p class="fw-medium m-0">{{post.likes }}</p> -->
+        </div>
+      </div>
+    </div>
+  </a>
+  <h5 class="mt-5">Comments</h5>
+  <br />
+  <div *ngFor="let comment of comments">
+    <div class="card w-100 pt-3">
+      <div class="card-header bg-danger text-light">
+        <h3 class="m-0">@ {{ comment.name }}</h3>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ comment.body }}</h5>
+        <p class="card-text">
+          {{ comment.email }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
